@@ -1,0 +1,247 @@
+/* General Styles */
+@media (max-width: 768px) {
+    /* Adjust styles for tablets and small screens */
+}
+@media (max-width: 480px) {
+    /* Adjust styles for mobile phones */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef;
+    color: #333;
+}
+
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+}
+
+.top-nav a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.subject-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Forms and Interactive Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ, Contact, Rating, and Reviews Sections */
+.faq-section, .contact-section, .rating-section, .reviews-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item, .review-item {
+    margin-bottom: 15px;
+}
+
+/* Review Form */
+#review-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+#review-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#review-form input, 
+#review-form select, 
+#review-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#review-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#review-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Review Items */
+.review-item {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.review-item p {
+    margin: 5px 0;
+}
+
+/* Sidebar in Past Papers Page */
+/* Horizontal Layout for Past Papers Page */
+.horizontal-layout {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.horizontal-nav {
+    width: 250px;
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal-nav h2 {
+    margin-top: 0;
+}
+
+.horizontal-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.horizontal-nav a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.subject-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subject-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.subject-section a:hover {
+    text-decoration: underline;
+}
