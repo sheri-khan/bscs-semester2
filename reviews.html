@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews - BSCS Semester 2</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>BSCS Semester 2</h1>
         <nav class="top-nav">
             <a href="index.html">Home</a>
-            <a href="faq.html">FAQ</a>
+            <a href="past_papers.html">Past-papers</a>
             <a href="contact.html">Contact Us</a>
-            <a href="rating.html">Rating</a>
+
             <a href="reviews.html">Reviews</a>
-            <a href="past_papers.html">past-papers</a>
+            <a href="faq.html">FAQ</a>
         </nav>
     </header>
 
     <div class="container">
         <div class="horizontal-layout">
-            <nav class="horizontal-nav">
+            <!-- <nav class="horizontal-nav">
                 <h2>Reviews</h2>
-                <a href="#write-review">Write a Review</a>
+                <a href="#write-review">Write a Review</a> <br>
                 <a href="#view-reviews">View Reviews</a>
-            </nav>
-
+            </nav> -->
+            <p style="font-size: 20px;color: rgb(3, 26, 26);">Giving a review is a duty of every person <br> 
+              <br>
+                If you like it then give me a good review and good rating. <br>
+                <br>
+                If you need any improvement go to contact us page <a href="contact.html"> <b>contact-us</b></a> and give your suggestion there. <br>
+                I work best for good approach.</p>
             <div class="content">
                 <section id="write-review" class="subject-section">
                     <h2>Write a Review</h2>
                     <form id="review-form">
                         <label for="name">Your Name:</label>
                         <input type="text" id="name" name="name" required>
-                    
+
                         <label for="rating">Rating (1-5):</label>
                         <select id="rating" name="rating" required>
                             <option value="1">1</option>
@@ -42,13 +49,13 @@
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                    
+
                         <label for="review">Your Review:</label>
                         <textarea id="review" name="review" rows="5" required></textarea>
-                    
+
                         <button type="submit">Submit Review</button>
                     </form>
-                    
+
                 </section>
 
                 <section id="view-reviews" class="subject-section">
@@ -69,16 +76,16 @@
     </div>
 
     <footer>
-        <h2>Footer</h2>
+        <h2>@ sheri.in design</h2>
         <div class="footer-links">
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact Us</a>
-            <a href="rating.html">Rating</a>
             <a href="reviews.html">Reviews</a>
-            <a href="past_papers.html">past-papers</a>
+            <a href="past_papers.html">Past-papers</a>
         </div>
     </footer>
     <!-- <script src="scripts.js"></script> -->
     <script src="scripts.js" defer></script>
 </body>
+
 </html>

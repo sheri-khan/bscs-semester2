@@ -1,2 +1,3 @@
-git add Procfile
+web: node server.js
+
 

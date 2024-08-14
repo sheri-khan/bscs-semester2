@@ -1,9 +1,6 @@
 /* General Styles */
-@media (max-width: 768px) {
-    /* Adjust styles for tablets and small screens */
-}
-@media (max-width: 480px) {
-    /* Adjust styles for mobile phones */
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -12,57 +9,75 @@ body {
     padding: 0;
     background-color: #e9ecef;
     color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
     background-color: #343a40;
     color: #ffffff;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%; /* Ensure the header fits the screen width */
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column;  it define that all the elements are placed in a coulmn from top to bottom */
+    flex-wrap: wrap;
+    width: 100%; /* Ensure the navigation bar fits the screen width */
 }
 
 .top-nav a {
     color: #ffffff;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     padding: 10px;
 }
 
 .top-nav a:hover {
-    background-color: #495057;
+    transition: 0.5s;
+    background-color: rgb(75, 165, 195);
     border-radius: 5px;
 }
 
 .main-container {
     display: flex;
-    height: 100vh;
+    flex-wrap: wrap;
     margin: 20px;
+    padding-bottom: 60px; /* Adjust padding to avoid overlap with fixed footer */
 }
 
 .sidebar {
     width: 250px;
     background-color: #343a40;
     color: #ffffff;
-    padding: 20px;
+    padding: 5px;
     overflow-y: auto;
+    flex-shrink: 0; /* Prevent shrinking of sidebar on smaller screens */
 }
 
 .sidebar h2 {
     margin-top: 0;
+    text-align: center;
+    background-color: rgb(75, 165, 195);
+    border-radius: 10px;
+    padding: 3px;
 }
 
 .sidebar a {
-    display: block;
+    display: flex;
     color: #ffffff;
     text-decoration: none;
     padding: 10px 0;
 }
 
 .sidebar a:hover {
-    background-color: #495057;
+    transition: 0.5s;
+    background-color: rgb(75, 165, 195);
     border-radius: 5px;
 }
 
@@ -70,6 +85,7 @@ header {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
+    width: 100%; /* Ensure content width fits the screen */
 }
 
 .subject-section {
@@ -78,13 +94,45 @@ header {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure sections fit the screen width */
 }
 
-/* Forms and Interactive Elements */
+/* h4, h5, p {
+    width: 100%; /* Ensure all headings and paragraphs fit the screen width 
+    /*text-align: center; Center the text for better readability 
+}*/
+h5{
+    border: solid black;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+h2{
+    
+    font-size: 25px;
+}
+h4{
+    text-align: center;
+    font-size: 20px;
+}
+#sidebar-h2{
+    font-size: 18px;
+}
+
+
+img {
+    max-width: 100%; /* Ensure images scale to fit within the screen */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center images horizontally */
+    border-bottom: dotted black;
+    border-width: 5px;
+}
+
 form {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    max-width: 100%; /* Ensure forms fit within the screen */
     margin: auto;
 }
 
@@ -98,6 +146,7 @@ input, textarea, select {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%; /* Ensure input elements fit the screen width */
 }
 
 button {
@@ -108,20 +157,26 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%; /* Ensure buttons fit the screen width */
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-/* Footer */
 footer {
     background-color: #343a40;
     color: #ffffff;
     text-align: center;
-    padding: 15px;
+    padding: 1px;
+    width: 100%; /* Ensure the footer fits the screen width */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
 }
 
+/* Ensure the footer links are accessible */
 .footer-links a {
     color: #ffffff;
     text-decoration: none;
@@ -132,116 +187,138 @@ footer {
     text-decoration: underline;
 }
 
-/* FAQ, Contact, Rating, and Reviews Sections */
 .faq-section, .contact-section, .rating-section, .reviews-section {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure sections fit the screen width */
 }
 
-.faq-item, .review-item {
-    margin-bottom: 15px;
-}
-
-/* Review Form */
-#review-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: auto;
-}
-
-#review-form label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-#review-form input, 
-#review-form select, 
-#review-form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#review-form button {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#review-form button:hover {
-    background-color: #0056b3;
-}
-
-/* Review Items */
 .review-item {
     border-top: 1px solid #ddd;
     padding-top: 10px;
     margin-top: 10px;
 }
 
-.review-item p {
-    margin: 5px 0;
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        margin: 10px;
+        padding-bottom: 60px; /* Adjust padding to avoid overlap with fixed footer */
+    }
 
-/* Sidebar in Past Papers Page */
-/* Horizontal Layout for Past Papers Page */
-.horizontal-layout {
-    display: flex;
-    flex-direction: row;
-    margin: 20px;
-}
+    .sidebar {
+        width: 100%; /* Ensure sidebar fits the screen width on smaller devices */
+        margin-bottom: 20px;
+    }
+    /* .horizontal-nav{
+        
+        width: 100px;
+        margin-bottom: 20px;
+        
+    } */
+   
 
-.horizontal-nav {
-    width: 250px;
-    background-color: #343a40;
-    color: #ffffff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
+    .content {
+        margin: 0;
+        padding: 10px;
+    }
 
-.horizontal-nav h2 {
-    margin-top: 0;
-}
+    header {
+        padding: 8px;
+    }
 
-.horizontal-nav a {
-    color: #ffffff;
+    .top-nav a {
+        margin: 0 5px;
+        padding: 8px;
+    }
+
+    h2, h4, h5 {
+        font-size: 18px;
+    } 
+     
+  
+
+    form, #review-form {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 0px;
+    }
+}
+#anote{
+    /* background-color: rgb(160, 229, 238); */
+    color: #3f0ac5;
     text-decoration: none;
-    padding: 10px 0;
+    font-size: 20px;
 }
 
-.horizontal-nav a:hover {
-    background-color: #495057;
-    border-radius: 5px;
-}
+@media (max-width: 480px) {
+    header {
+        padding: 6px;
+        font-size: 16px;
+    }
 
-.content {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-}
+    .top-nav a {
+        margin: 0 3px;
+        padding: 6px;
+        font-size: 14px;
+    }
 
-.subject-section {
-    background-color: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    .top-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-.subject-section a {
-    color: #007bff;
-    text-decoration: none;
-}
+    .main-container, .horizontal-layout {
+        margin: 5px;
+        padding-bottom: 60px; /* Adjust padding to avoid overlap with fixed footer */
+    }
 
-.subject-section a:hover {
-    text-decoration: underline;
+    .sidebar {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .sidebar a {
+        display: inline-block;
+        padding: 5px;
+        margin: 0 5px;
+    }
+
+    .content {
+        padding: 5px;
+    }
+
+    h2, h4, h5, p {
+        font-size: 16px;
+    }
+
+    .subject-section {
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    form, #review-form {
+        max-width: 100%;
+        margin: 5px auto;
+        padding: 5px;
+    }
+
+    input, textarea, select, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    footer {
+        padding: 8px;
+        font-size: 14px;
+    }
 }
